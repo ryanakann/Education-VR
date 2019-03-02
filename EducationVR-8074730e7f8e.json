@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "educationvr-1551552285621",
+  "private_key_id": "8074730e7f8eb050b055d279d7a4fc1a3dd457f4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCTQVrMDhtwTXmM\np9dKLFf+fHguN9Jsz12yrVAxqHZ7X5Qo4o08x5dQkd70VmdleddIUQ1CnSU9EU6k\nq3FnPDCXDQODYGdhEQ4ohSj9+JS3UnBw0JRGqFfE9Ci/VovbXPoAAbqmNkUg/+7k\nkD0kfbdfuNckiSacfhTu6b0xwRQIjfu0eUZ359ntROVCGKrA2NR7RVfw91XdRvxF\nHyfq4c9XajaPwemBCDxNjjkExMokyQzJR6wyod0/6o+u5PpzxxHemKJQ9W+D61uK\nFTaP8te+2O0HzqhIKgP+7OTBJVUVQ4GNceap+RQ3n8XUShhuzVDemINN92ICdhhx\n+HITtvQFAgMBAAECggEABV1a6mFe216d3ZjgGsYWoZaVcUecLVXOVHwEa9QMQaPi\nhlfJ7KDahiH+VPlQidhLFnR0zsxh/CwlKOd3DvCuK36a9hO9HcKXjl8wNl/H7o18\nu7DESiEIFjc37yU/HKDcmcNLsmelPpXHCqwnkhdYvCPEMML6Crb8L7+zt7w7QjF4\niEE3pcEvaDdRLMzCVbB2XIXb2ujmdb9KxF3adoY5FlIcjTdPqRdI2c7WseDAb+EY\nF0/8rV4s1CGkeJunGk6OuTCol/kEY5KnGxeox5ovUrhO0OwCFV8xHsMdWWZlVuOY\nEU1WDAo3lHOyF1pv77fM/lxGO7HnFdI2KqvE3waP6QKBgQDDgyVEKdSZpQByoXNh\nvmVKLJbFOzE5nva6h/+IEQdfRdFAOol7c4KMKDVdDAwzrPcix2VrNvK4JtR3Ch6q\nvHmBGa8+lYMvJs218gwaHwd3Qxbu2p4F0NwCM5bLtvHqgbCwh3aHm9F3rionGTJ+\nfdIHKcR0gmRxDdXFzqFaqFI3bQKBgQDA0C+FAH3djQjoKlV67TmypF0rXVDOZNCQ\nQuxECbUql/FF0f8EY0BpUz6N0ddV4UKLXiFoiV3Cu/Mj2SXgbK/AECGWfMpSYpj1\nhyfRIntbPWK0dsfTPOJbiyOezk8tyYEKTwBGZhMjIFgRJg9ywM4JIgN3ZuMxdgK5\n/oMXp+1X+QKBgAF9FySMuPyuf/Fff1RoMbc93awExlws9K346R4tGwRDsNMvXuqc\nt4q/p6Bcvh8Kmxsdr40Abxqt2QJLBm7AXqB4BJiSZNxQDFLtU+BDCjiDP0J0Ua2z\nqGkv4V8NtovVjvXZIjLoIdEqd1Gy5GqIJLg/Piqw73jY5R7LcvkQvQeFAoGBAKF3\n9sOYFM/LwzDB+xHVxiLfWJLvM7OUY8Db+oZD5u7Dja8d3EVtZMyPhOw5Ve66lQKn\nkqy7lMR2p3hW6kxWWJwsJiSjXr+9iEDdra+LA+j1sEpWyqMQ8rMdA3iDZ3V9sU3T\nuPQ7mT0qYfYCfJ9p7WFilaqRhCOwoznldR0DaVTpAoGALb0tKBBa1BXBxOqsT1LF\n58u1uptID8NafgfXMaDBKYfVYWZBvEGfNL5K6P4w/PL9Qh8fMaMQ77a9Zgh1fNj2\nnrtPl049OjOId2wISIwv+joVpVimgx3HYQoJNM375VMkrhPgZ4UhYeuISLsl2+Cm\nfkUTCjKyMGqFVkAJBGbBngE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "starting-account-j1cf98y22yyu@educationvr-1551552285621.iam.gserviceaccount.com",
+  "client_id": "106469873952609446858",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-j1cf98y22yyu%40educationvr-1551552285621.iam.gserviceaccount.com"
+}
