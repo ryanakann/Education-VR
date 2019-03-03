@@ -15,14 +15,15 @@ public class SceneController : MonoBehaviour
             instance = this;
         } else
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
 
         DontDestroyOnLoad(gameObject);
     }
 
-    public void SetScene(int sceneIndex)
+    public static void SetScene(int sceneIndex)
     {
+        SessionManager.SetTranslator();
         SceneManager.LoadScene(sceneIndex);
     }
 }

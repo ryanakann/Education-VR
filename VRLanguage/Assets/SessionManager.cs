@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniLang;
 
 public class SessionManager : MonoBehaviour
 {
@@ -10,8 +11,9 @@ public class SessionManager : MonoBehaviour
     public static string langCode;
 
     public static Dictionary<string, string> languageMap;
-    public string[] languages;
-    public string[] langCodes;
+
+    public static Translator translator;
+    public static TranslatedTextPair textPair;
 
     // Start is called before the first frame update
     void Awake()
@@ -51,11 +53,22 @@ public class SessionManager : MonoBehaviour
                  { "Spanish", "sv" },
                  { "Urdu", "ur" },
              };
+
+        if (translator == null)
+        {
+            translator = Translator.Create("en", "de");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         print(language + "\t" + langCode);
+    }
+
+    public static void SetTranslator ()
+    {
+        translator = Translator.Create("en", langCode);
+
     }
 }

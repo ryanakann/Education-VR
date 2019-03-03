@@ -11,7 +11,7 @@ namespace Valve.VR.InteractionSystem.Sample
 {
 	//-------------------------------------------------------------------------
 	[RequireComponent( typeof( Interactable ) )]
-	public class InteractableExample : MonoBehaviour
+	public class InteractableAddon : MonoBehaviour
 	{
 		private TextMesh textMesh;
 		private Vector3 oldPosition;
@@ -23,13 +23,16 @@ namespace Valve.VR.InteractionSystem.Sample
 
         private Interactable interactable;
 
+        private TranslatableObject translatableObj;
+
 		//-------------------------------------------------
 		void Awake()
 		{
 			textMesh = GetComponentInChildren<TextMesh>();
-			textMesh.text = "No Hand Hovering";
+			textMesh.text = "";
 
             interactable = this.GetComponent<Interactable>();
+            translatableObj = GetComponent<TranslatableObject>();
 		}
 
 
@@ -38,7 +41,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		//-------------------------------------------------
 		private void OnHandHoverBegin( Hand hand )
 		{
-			textMesh.text = "Hovering hand: " + hand.name;
+			textMesh.text = translatableObj.originalName;
 		}
 
 
@@ -47,7 +50,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		//-------------------------------------------------
 		private void OnHandHoverEnd( Hand hand )
 		{
-			textMesh.text = "No Hand Hovering";
+			textMesh.text = "";
 		}
 
 
@@ -92,8 +95,8 @@ namespace Valve.VR.InteractionSystem.Sample
 		//-------------------------------------------------
 		private void OnAttachedToHand( Hand hand )
 		{
-			textMesh.text = "Attached to hand: " + hand.name;
-			attachTime = Time.time;
+			textMesh.text = translatableObj.translatedName;
+            attachTime = Time.time;
 		}
 
 
@@ -102,7 +105,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		//-------------------------------------------------
 		private void OnDetachedFromHand( Hand hand )
 		{
-			textMesh.text = "Detached from hand: " + hand.name;
+
 		}
 
 
@@ -111,7 +114,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		//-------------------------------------------------
 		private void HandAttachedUpdate( Hand hand )
 		{
-			textMesh.text = "Attached to hand: " + hand.name + "\nAttached time: " + ( Time.time - attachTime ).ToString( "F2" );
+
 		}
 
 

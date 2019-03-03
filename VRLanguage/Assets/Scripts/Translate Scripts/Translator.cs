@@ -37,6 +37,45 @@ namespace UniLang {
             StartCoroutine(TranslateAsync(text, result));
         }
 
+        private string ret;
+
+        public string Translate (string text)
+        {
+            StartCoroutine(TranslateCR(text));
+            return text;
+        }
+
+        public IEnumerator TranslateCR (string text)
+        {
+            var requestUrl = String.Format(k_Url, new object[] { m_SourceLang, m_TargetLang, text });
+            WWW req = new WWW(requestUrl);
+
+            yield return req;
+
+            if (string.IsNullOrEmpty(req.error))
+            {
+                var json = JArray.Parse(req.text);
+                var results = new List<TranslatedTextPair>();
+
+                foreach (var v in (JArray)(json[0]))
+                {
+                    ret = (string)v[0];
+                    print("COULD FIND YEET");
+                    break;
+                    results.Add(new TranslatedTextPair(
+                            (string)(v[1]),
+                            (string)(v[0])
+                        )
+                    );
+                }
+            }
+            else
+            {
+                print("COULD NO FIND");
+                ret = text;
+            }
+        }
+
         IEnumerator TranslateAsync(string text, Action<TranslatedTextPair[]> result) {
             var requestUrl = String.Format(k_Url, new object[] { m_SourceLang, m_TargetLang, text });
             WWW req = new WWW(requestUrl);
