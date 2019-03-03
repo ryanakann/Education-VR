@@ -12,11 +12,16 @@ public class TranslatableObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        print("SessionManager: " + SessionManager.instance);
+        print("Translator: " + SessionManager.translator);
+
         originalName = gameObject.name;
 
         SessionManager.translator.Run(originalName, results => {
             foreach (var result in results)
+            {
                 translatedName += result.translated;
+            }
         });
     }
 

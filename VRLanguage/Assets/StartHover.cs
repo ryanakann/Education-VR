@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using TMPro;
 
 public class StartHover : MonoBehaviour
 {
@@ -28,10 +29,20 @@ public class StartHover : MonoBehaviour
     {
         if (SteamVR_Input.__actions_default_in_GrabPinch.GetStateDown(SteamVR_Input_Sources.Any))
         {
-            if (selectedObj.CompareTag("Button"))
+            if (selectedObj.CompareTag("SubmitButton"))
             {
                 SceneController.SetScene(1);
             }
+            else if (selectedObj.CompareTag("DropDown"))
+            {
+                TMP_Dropdown drop = selectedObj.GetComponent<TMP_Dropdown>();
+                drop.Show();
+            }
+            else if (selectedObj.name.Contains("Item"))
+            {
+
+            }
+
         }
     }
 
@@ -45,13 +56,32 @@ public class StartHover : MonoBehaviour
         if (Physics.Raycast(raydirection, out seen, sightlength))
         {
             line.enabled = true;
-            if (seen.collider.CompareTag("Button"))
+            if (seen.collider.CompareTag("SubmitButton"))
             {
                 line.material.color = Color.green;
                 if (selectedObj != null && selectedObj != seen.transform.gameObject)
                 {
                     GameObject hitObject = seen.transform.gameObject;
-                    MoveMenuButton(hitObject);
+                }
+                selectedObj = seen.transform.gameObject;
+
+            }
+            else if (seen.collider.CompareTag("DropDown"))
+            {
+                line.material.color = Color.green;
+                if (selectedObj != null && selectedObj != seen.transform.gameObject)
+                {
+                    GameObject hitObject = seen.transform.gameObject;
+                }
+                selectedObj = seen.transform.gameObject;
+
+            }
+            else if (seen.collider.gameObject.name.Contains("Item"))
+            {
+                line.material.color = Color.green;
+                if (selectedObj != null && selectedObj != seen.transform.gameObject)
+                {
+                    GameObject hitObject = seen.transform.gameObject;
                 }
                 selectedObj = seen.transform.gameObject;
 

@@ -34,7 +34,6 @@ public class SessionManager : MonoBehaviour
 
         languageMap = new Dictionary<string, string>
              {
-                 { "English", "en" },
                  { "French", "fr" },
                  { "German", "de" },
                  { "Dutch", "nl" },
@@ -52,6 +51,7 @@ public class SessionManager : MonoBehaviour
                  { "Russian", "ru" },
                  { "Spanish", "sv" },
                  { "Urdu", "ur" },
+                 { "English", "en" },
              };
 
         if (translator == null)
@@ -60,15 +60,8 @@ public class SessionManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        print(language + "\t" + langCode);
-    }
-
     public static void SetTranslator ()
     {
         translator = Translator.Create("en", langCode);
-
     }
 }

@@ -82,11 +82,13 @@ namespace UniLang {
 
             yield return req;
 
-            if (string.IsNullOrEmpty(req.error)) {
+            if (string.IsNullOrEmpty(req.error))
+            {
                 var json = JArray.Parse(req.text);
                 var results = new List<TranslatedTextPair>();
 
-                foreach (var v in (JArray)(json[0])) {
+                foreach (var v in (JArray)(json[0]))
+                {
                     results.Add(new TranslatedTextPair(
                             (string)(v[1]),
                             (string)(v[0])
@@ -96,7 +98,9 @@ namespace UniLang {
                 result(results.ToArray());
             }
             else
+            {
                 result(null);
+            }
         }
 
         void TryLog(object msg) {
