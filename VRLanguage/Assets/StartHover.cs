@@ -33,19 +33,19 @@ public class StartHover : MonoBehaviour
             {
                 SceneController.SetScene(1);
             }
-            else if (selectedObj.CompareTag("DropDown"))
-            {
-                TMP_Dropdown drop = selectedObj.GetComponent<TMP_Dropdown>();
-                drop.Show();
-            }
-            else if (selectedObj.name.Contains("Item"))
-            {
-
-            }
+            
 
         }
+        if (SteamVR_Input.__actions_default_in_GrabGrip.GetStateDown(SteamVR_Input_Sources.Any))
+        {
+            if (selectedObj.CompareTag("DropDown"))
+            {
+                TMP_Dropdown drop = selectedObj.GetComponent<TMP_Dropdown>();
+                drop.value = (drop.value + 1) % drop.options.Count;
+                drop.RefreshShownValue();
+            }
+        }
     }
-
     private void FixedUpdate()
     {
 
